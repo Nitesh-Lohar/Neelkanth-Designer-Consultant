@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 30 10% 12%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 30 10% 12%;
+
+    --popover: 40 20% 97%;
+    --popover-foreground: 30 10% 12%;
+
+    --primary: 30 30% 25%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 38 35% 90%;
+    --secondary-foreground: 30 10% 12%;
+
+    --muted: 38 20% 92%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 43 80% 50%;
+    --accent-foreground: 30 10% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 43 80% 50%;
+
+    --radius: 0.5rem;
+
+    --earth: 20 40% 35%;
+    --earth-foreground: 40 20% 97%;
+    --earth-light: 30 30% 75%;
+    --sand: 38 40% 88%;
+    --gold: 43 80% 50%;
+    --gold-dark: 40 70% 40%;
+    --charcoal: 30 10% 15%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+  }
+
+  .earth-gradient {
+    background: linear-gradient(135deg, hsl(var(--earth)) 0%, hsl(var(--charcoal)) 100%);
+  }
+
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(43 80% 55%) 0%, hsl(40 70% 40%) 100%);
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
