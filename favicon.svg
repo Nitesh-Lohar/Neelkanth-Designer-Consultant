@@ -1,0 +1,16 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer left roof -->
+  <polygon points="15,320 140,180 290,180 290,320" fill="#FFA500"/>
+  
+  <!-- Outer right roof -->
+  <polygon points="210,240 360,240 485,320 290,320" fill="#FFA500"/>
+  
+  <!-- Inner white roof detail -->
+  <polygon points="180,240 350,240 280,200" fill="white"/>
+  
+  <!-- Inner orange roof detail -->
+  <polygon points="250,290 350,240 280,200 250,200" fill="#FFA500"/>
+  
+  <!-- Small black window/door -->
+  <rect x="245" y="280" width="30" height="30" fill="black"/>
+</svg>
