@@ -16,7 +16,7 @@ const services = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] sm:min-h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden py-16 sm:py-20">
       <img
         src={heroImg}
         alt="Luxury rammed earth villa by Sustainia Builders Udaipur"
@@ -25,22 +25,22 @@ const Index = () => (
         height={1080}
       />
       <div className="absolute inset-0 bg-charcoal/60" />
-      <div className="relative z-10 text-center px-4 max-w-4xl animate-fade-in">
-        <h1 className="text-gold font-medium tracking-[0.3em] uppercase mb-3 font-serif text-6xl md:text-8xl">SUSTAINIA</h1>
-        <p className="text-earth-light/60 text-xs sm:text-sm tracking-[0.15em] uppercase mb-6">
+      <div className="relative z-10 text-center px-4 sm:px-6 md:px-4 max-w-4xl animate-fade-in">
+        <h1 className="text-gold font-medium tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-3 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-8xl">SUSTAINIA</h1>
+        <p className="text-earth-light/60 text-xs sm:text-sm tracking-[0.15em] uppercase mb-4 sm:mb-6">
           A brand by <span className="text-gold/90 font-semibold">Neelkanth Designer & Consultant</span>
         </p>
-        <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-6">
+        <p className="font-display text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-primary-foreground leading-tight mb-4 sm:mb-6">
           Building Dreams from <span className="text-gold-gradient">Land to Landmark</span>
         </p>
-        <p className="text-earth-light/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        <p className="text-earth-light/80 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-6 sm:mb-8">
           Most Premium and reliable construction & rammed earth specialists in Udaipur. From plain land to fully finished, lock-and-key projects.
         </p>
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 gold-gradient text-charcoal font-semibold px-8 py-4 rounded-sm text-lg hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 gold-gradient text-charcoal font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-sm text-base sm:text-lg hover:opacity-90 transition-opacity"
         >
-          Contact Us <ArrowRight size={20} />
+          Contact Us <ArrowRight size={18} className="sm:w-5 sm:h-5" />
         </Link>
       </div>
     </section>
@@ -48,24 +48,24 @@ const Index = () => (
     {/* Services Preview */}
     <section className="section-padding bg-background">
       <div className="container-width">
-        <div className="text-center mb-16">
-          <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-2">What We Do</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Our Services</h2>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <p className="text-gold font-medium tracking-[0.2em] uppercase text-xs sm:text-sm mb-2 sm:mb-3">What We Do</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">Our Services</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {services.map((s) => (
             <div
               key={s.title}
-              className="group bg-card border border-border rounded-lg p-8 hover:border-gold/40 hover:shadow-lg transition-all duration-300"
+              className="group bg-card border border-border rounded-lg p-6 sm:p-7 md:p-8 hover:border-gold/40 hover:shadow-lg transition-all duration-300"
             >
-              <s.icon size={36} className="text-gold mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{s.title}</h3>
+              <s.icon size={32} className="sm:w-9 sm:h-9 md:w-9 md:h-9 text-gold mb-3 sm:mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2">{s.title}</h3>
               <p className="text-muted-foreground text-sm">{s.desc}</p>
             </div>
           ))}
         </div>
-        <div className="text-center mt-12">
-          <Link to="/services" className="inline-flex items-center gap-2 text-gold font-medium hover:underline">
+        <div className="text-center mt-8 sm:mt-10 md:mt-12">
+          <Link to="/services" className="inline-flex items-center gap-2 text-gold font-medium hover:underline text-sm sm:text-base">
             View All Services <ArrowRight size={16} />
           </Link>
         </div>
@@ -74,23 +74,23 @@ const Index = () => (
 
     {/* Rammed Earth USP */}
     <section className="section-padding earth-gradient">
-      <div className="container-width grid md:grid-cols-2 gap-12 items-center">
+      <div className="container-width grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
         <div>
-          <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-2">Our Specialty</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+          <p className="text-gold font-medium tracking-[0.2em] uppercase text-xs sm:text-sm mb-2 sm:mb-3">Our Specialty</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4 sm:mb-6">
             Rammed Earth Construction
           </h2>
-          <p className="text-earth-light/80 leading-relaxed mb-8">
+          <p className="text-earth-light/80 leading-relaxed text-sm sm:text-base mb-6 sm:mb-8">
             We are one of the only companies in Udaipur and nearby regions specializing in rammed earth (mud-based) construction — an ancient technique perfected for modern living. Ideal for eco-conscious luxury villas, cottages, and resort projects.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
             {[
               { icon: Leaf, label: "Eco-Friendly", desc: "100% natural materials" },
               { icon: Shield, label: "Strong & Durable", desc: "Lasts for generations" },
               { icon: ThermometerSun, label: "Thermal Insulation", desc: "Better than cement" },
             ].map((f) => (
               <div key={f.label} className="text-center">
-                <f.icon size={28} className="text-gold mx-auto mb-2" />
+                <f.icon size={24} className="sm:w-7 sm:h-7 text-gold mx-auto mb-2 sm:mb-3" />
                 <h4 className="text-primary-foreground font-semibold text-sm">{f.label}</h4>
                 <p className="text-earth-light/60 text-xs mt-1">{f.desc}</p>
               </div>
@@ -101,7 +101,7 @@ const Index = () => (
           <img
             src={rammedEarthImg}
             alt="Rammed earth wall texture"
-            className="w-full h-80 md:h-96 object-cover"
+            className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-cover"
             loading="lazy"
             width={1280}
             height={720}
@@ -113,18 +113,18 @@ const Index = () => (
 
     {/* CTA */}
     <section className="section-padding bg-sand text-center">
-      <div className="container-width max-w-2xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+      <div className="container-width max-w-2xl px-4 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
           Ready to Build Your Dream?
         </h2>
-        <p className="text-muted-foreground mb-8">
+        <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">
           From concept to completion, we bring your vision to life with quality, trust, and innovation.
         </p>
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 gold-gradient text-charcoal font-semibold px-8 py-4 rounded-sm text-lg hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 gold-gradient text-charcoal font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-sm text-base sm:text-lg hover:opacity-90 transition-opacity"
         >
-          Contact Us <ArrowRight size={20} />
+          Contact Us <ArrowRight size={18} className="sm:w-5 sm:h-5" />
         </Link>
       </div>
     </section>
