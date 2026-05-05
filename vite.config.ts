@@ -4,7 +4,6 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/earth-build-dreams/', // Use your repo name here
   server: {
     host: "::",
     port: 8080,
